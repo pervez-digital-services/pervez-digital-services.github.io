@@ -1,10 +1,10 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professional Data Management, Lead Generation, AI Content Creation and Virtual Assistant Services by Parvez Mia">
+<meta name="description" content="Professional Data Management, Lead Generation, AI Content Creation, Video Editing and Virtual Assistant Services by Parvez Mia">
 <title>Parvez Digital Services</title>
 
 <style>
@@ -14,10 +14,6 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background:#f4f7f6;
@@ -25,10 +21,9 @@ body{
     line-height:1.7;
 }
 
-/* Header */
 header{
     background:linear-gradient(135deg,#2c3e50,#1abc9c);
-    color:white;
+    color:#fff;
     text-align:center;
     padding:60px 20px;
 }
@@ -38,7 +33,7 @@ header{
     height:160px;
     border-radius:50%;
     object-fit:cover;
-    border:5px solid white;
+    border:5px solid #fff;
     margin-bottom:15px;
 }
 
@@ -49,19 +44,16 @@ header h1{
 
 header p{
     font-size:1.2rem;
-    opacity:0.95;
 }
 
-/* Main Container */
 .container{
-    max-width:1100px;
+    max-width:1200px;
     margin:30px auto;
-    padding:25px;
+    padding:20px;
 }
 
-/* Sections */
 .section{
-    background:white;
+    background:#fff;
     padding:25px;
     border-radius:10px;
     margin-bottom:25px;
@@ -70,15 +62,14 @@ header p{
 
 h2{
     color:#2c3e50;
-    margin-bottom:15px;
-    padding-bottom:8px;
     border-bottom:3px solid #1abc9c;
+    padding-bottom:8px;
+    margin-bottom:20px;
 }
 
-/* Services */
 .services-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
 }
 
@@ -87,12 +78,12 @@ h2{
     padding:20px;
     border-left:5px solid #1abc9c;
     border-radius:8px;
-    transition:.3s;
+    transition:0.3s;
 }
 
 .service-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
 .service-card h3{
@@ -100,11 +91,16 @@ h2{
     color:#2c3e50;
 }
 
-/* Why Choose Me */
-```css
+.service-card ul{
+    padding-left:20px;
+}
+
+.service-card li{
+    margin-bottom:6px;
+}
+
 .features ul{
     list-style:none;
-    padding:0;
 }
 
 .features li{
@@ -113,17 +109,8 @@ h2{
     padding:12px 15px;
     border-left:4px solid #1abc9c;
     border-radius:5px;
-    transition:0.3s;
 }
 
-.features li:hover{
-    transform:translateX(5px);
-    background:#eefaf7;
-}
-```
-
-
-/* Contact */
 .contact{
     text-align:center;
 }
@@ -133,223 +120,185 @@ h2{
     padding:12px 25px;
     margin:10px;
     text-decoration:none;
-    color:white;
+    color:#fff;
     background:#1abc9c;
     border-radius:6px;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 6px 15px rgba(0,0,0,0.15);
 }
 
 .facebook-btn{
     background:#1877f2;
 }
 
-/* Footer */
 footer{
     text-align:center;
-    background:#2c3e50;
-    color:white;
     padding:20px;
-    margin-top:30px;
+    background:#2c3e50;
+    color:#fff;
 }
 
-/* Mobile */
 @media(max-width:768px){
-
-    header h1{
-        font-size:2rem;
-    }
-
-    header p{
-        font-size:1rem;
-    }
-
     .profile-img{
         width:120px;
         height:120px;
     }
+
+    header h1{
+        font-size:2rem;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
     <img src="profile.jpg" alt="Parvez Mia" class="profile-img">
-
-```
-<h1>Parvez Mia</h1>
-<p>Professional Data Management & AI Content Specialist</p>
-```
-
+    <h1>Parvez Mia</h1>
+    <p>Professional Data Management & AI Content Specialist</p>
 </header>
 
 <div class="container">
 
-```
-<section class="section">
-    <h2>About Me</h2>
+    <section class="section">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm Parvez Mia, a dedicated freelancer specializing in Data Entry,
+            Lead Generation, Web Research, AI Content Creation, Video Editing,
+            Thumbnail Design, and Virtual Assistant Services.
+            I help businesses grow through accurate data management,
+            engaging content, and professional digital solutions.
+        </p>
+    </section>
 
-    <p>
-        Hello! I'm Parvez Mia, a dedicated professional specializing in
-        Data Management, Lead Generation, Web Research, AI Content Creation,
-        Image Editing, and Virtual Assistance. I help businesses manage data
-        efficiently, generate quality leads, and create impactful content
-        that drives results.
-    </p>
-</section>
+    <section class="section">
+        <h2>My Professional Services</h2>
 
-```html
-<section class="section">
-    <h2>My Professional Services</h2>
+        <div class="services-grid">
 
-    <div class="services-grid">
+            <div class="service-card">
+                <h3>📊 Data & Lead Generation</h3>
+                <ul>
+                    <li>B2B Lead Generation</li>
+                    <li>LinkedIn Lead Generation</li>
+                    <li>Targeted Email List Building</li>
+                    <li>Apollo.io Lead Generation</li>
+                    <li>Email Finding & Verification</li>
+                    <li>Data Entry & Web Research</li>
+                    <li>Excel Data Entry</li>
+                    <li>CRM Data Entry</li>
+                    <li>Data Collection</li>
+                    <li>Virtual Assistant Services</li>
+                </ul>
+            </div>
 
-        <div class="service-card">
-            <h3>📊 Data & Lead Generation</h3>
-            <ul>
-                <li>B2B Lead Generation</li>
-                <li>LinkedIn Lead Generation</li>
-                <li>Targeted Email List Building</li>
-                <li>Apollo.io Lead Generation</li>
-                <li>Email Finding & Verification</li>
-                <li>Data Entry & Web Research</li>
-                <li>Excel Data Entry</li>
-                <li>Copy Paste & Data Collection</li>
-                <li>CRM Data Entry</li>
-                <li>Virtual Assistant for Data Entry</li>
-            </ul>
+            <div class="service-card">
+                <h3>🎬 Video Editing</h3>
+                <ul>
+                    <li>YouTube Video Editing</li>
+                    <li>YouTube Shorts & Reels Editing</li>
+                    <li>Talking Head Video Editing</li>
+                    <li>Faceless Cash Cow Video Editing</li>
+                    <li>Podcast Video Editing</li>
+                    <li>Social Media Video Editing</li>
+                    <li>Subtitle & Caption Editing</li>
+                    <li>Cinematic Video Editing</li>
+                    <li>Motion Graphics & Transitions</li>
+                    <li>Professional Color Grading</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>🖼️ Thumbnail Design</h3>
+                <ul>
+                    <li>YouTube Thumbnail Design</li>
+                    <li>Gaming Thumbnail Design</li>
+                    <li>Viral Clickable Thumbnail</li>
+                    <li>Facebook Thumbnail Design</li>
+                    <li>Professional Custom Thumbnail</li>
+                    <li>Thumbnail Enhancement</li>
+                    <li>Bulk Thumbnail Package</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>🤖 AI Media & Design</h3>
+                <ul>
+                    <li>AI Image Generation</li>
+                    <li>AI Video Generation</li>
+                    <li>AI Thumbnail Design</li>
+                    <li>AI Photo Editing</li>
+                    <li>AI Background Removal</li>
+                    <li>AI Image Upscaling</li>
+                    <li>AI Social Media Post Design</li>
+                    <li>AI Logo Concept Generation</li>
+                    <li>AI Content Creation</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>✨ Image Editing & Design</h3>
+                <ul>
+                    <li>AI Image Editing</li>
+                    <li>AI Photo Enhancement</li>
+                    <li>AI Product Photo Editing</li>
+                    <li>AI Logo Design</li>
+                    <li>AI Logo Redesign</li>
+                    <li>AI Brand Identity Design</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>✍️ Content Creation</h3>
+                <ul>
+                    <li>YouTube Script Writing</li>
+                    <li>SEO Blog Writing</li>
+                    <li>Article Writing</li>
+                    <li>Website Content Writing</li>
+                    <li>Social Media Content Creation</li>
+                    <li>AI Content Writing</li>
+                    <li>Product Description Writing</li>
+                    <li>Copywriting</li>
+                    <li>Content Editing & Proofreading</li>
+                </ul>
+            </div>
+
         </div>
+    </section>
 
-        <div class="service-card">
-            <h3>🎬 Video Editing</h3>
-            <ul>
-                <li>YouTube Video Editing</li>
-                <li>YouTube Shorts & Reels Editing</li>
-                <li>Talking Head Video Editing</li>
-                <li>Faceless Cash Cow Video Editing</li>
-                <li>Social Media Video Editing</li>
-                <li>Podcast Video Editing</li>
-                <li>Subtitle & Caption Editing</li>
-                <li>Cinematic Video Editing</li>
-                <li>Motion Graphics & Transitions</li>
-                <li>Professional Color Grading</li>
-            </ul>
-        </div>
+    <section class="section features">
+        <h2>Why Choose Me?</h2>
+        <ul>
+            <li>✔️ High-Quality Work with Attention to Detail</li>
+            <li>✔️ 100% Accuracy and Professional Service</li>
+            <li>✔️ Fast Delivery and Timely Communication</li>
+            <li>✔️ Client Satisfaction is My Top Priority</li>
+            <li>✔️ Reliable, Dedicated, and Results-Driven</li>
+            <li>✔️ Skilled in Data Entry, Lead Generation, AI Content Creation, and Video Editing</li>
+            <li>✔️ Quick Response and Ongoing Support</li>
+            <li>✔️ Committed to Delivering Value Beyond Expectations</li>
+        </ul>
+    </section>
 
-        <div class="service-card">
-            <h3>🖼️ Thumbnail Design</h3>
-            <ul>
-                <li>YouTube Thumbnail Design</li>
-                <li>Gaming Thumbnail Design</li>
-                <li>Viral Clickable Thumbnail</li>
-                <li>Facebook & Social Media Thumbnail</li>
-                <li>Professional Custom Thumbnail</li>
-                <li>Thumbnail Redesign & Enhancement</li>
-                <li>Bulk Thumbnail Package</li>
-            </ul>
-        </div>
+    <section class="section contact">
+        <h2>Let's Work Together</h2>
 
-        <div class="service-card">
-            <h3>🤖 AI Media & Video</h3>
-            <ul>
-                <li>AI Image & Design Services</li>
-                <li>AI Image Generation</li>
-                <li>AI Thumbnail Design</li>
-                <li>AI Photo Editing</li>
-                <li>AI Image Upscaling</li>
-                <li>AI Background Removal</li>
-                <li>AI Social Media Post Design</li>
-                <li>AI Logo Concept Generation</li>
-                <li>Fiverr Skill / Service Ideas</li>
-                <li>AI Content Creation</li>
-                <li>AI Video Generation</li>
-            </ul>
-        </div>
+        <p>Ready to grow your business? Contact me today.</p>
 
-        <div class="service-card">
-            <h3>✨ Image Editing & Design</h3>
-            <ul>
-                <li>AI Image Editing</li>
-                <li>AI Photo Enhancement</li>
-                <li>AI Background Removal</li>
-                <li>AI Image Upscaling</li>
-                <li>AI Product Photo Editing</li>
-                <li>AI Thumbnail Design</li>
-                <li>AI Logo Design</li>
-                <li>AI Minimalist Logo Design</li>
-                <li>AI Logo Redesign</li>
-                <li>AI Brand Identity Design</li>
-            </ul>
-        </div>
+        <a href="https://www.fiverr.com/s/WE5W51B" class="btn" target="_blank">
+            Fiverr Profile
+        </a>
 
-        <div class="service-card">
-            <h3>✍️ Content Creation</h3>
-            <ul>
-                <li>YouTube Script Writing</li>
-                <li>Faceless YouTube Script Writing</li>
-                <li>SEO Blog Writing</li>
-                <li>Article Writing</li>
-                <li>Website Content Writing</li>
-                <li>Social Media Content Creation</li>
-                <li>AI Content Writing</li>
-                <li>Product Description Writing</li>
-                <li>Copywriting</li>
-                <li>Content Editing & Proofreading</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-```
-
-
-```html
-<section class="section features">
-    <h2>Why Choose Me?</h2>
-
-    <ul>
-        <li>✔️ High-Quality Work with Attention to Detail</li>
-        <li>✔️ 100% Accuracy and Professional Service</li>
-        <li>✔️ Fast Delivery and Timely Communication</li>
-        <li>✔️ Client Satisfaction is My Top Priority</li>
-        <li>✔️ Reliable, Dedicated, and Results-Driven</li>
-        <li>✔️ Skilled in Data Entry, Lead Generation, AI Content Creation, and Video Editing</li>
-        <li>✔️ Quick Response and Ongoing Support</li>
-        <li>✔️ Committed to Delivering Value Beyond Expectations</li>
-    </ul>
-</section>
-```
-
-
-<section class="section contact">
-    <h2>Let's Work Together</h2>
-
-    <p>
-        Ready to grow your business? Contact me through my professional profiles.
-    </p>
-
-    <a href="https://www.fiverr.com/s/WE5W51B" target="_blank" rel="noopener noreferrer" class="btn">
-        Fiverr Profile
-    </a>
-
-    <a href="https://www.facebook.com/share/1BonYpxUxH/" target="_blank" rel="noopener noreferrer" class="btn facebook-btn">
-        Facebook Profile
-    </a>
-
-</section>
-```
+        <a href="https://www.facebook.com/share/1BonYpxUxH/" class="btn facebook-btn" target="_blank">
+            Facebook Profile
+        </a>
+    </section>
 
 </div>
 
 <footer>
-    © 2026 Parvez Mia | Professional Data Management Services
+    © 2026 Parvez Mia | All Rights Reserved
 </footer>
 
 </body>
 </html>
+```
