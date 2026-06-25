@@ -1,79 +1,271 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Data Management, Lead Generation, AI Content Creation and Virtual Assistant Services by Parvez Mia">
-    <title>Parvez Digital Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional Data Management, Lead Generation, AI Content Creation and Virtual Assistant Services by Parvez Mia">
+<title>Parvez Digital Services</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body{
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height:1.6;
-            background:#f4f7f6;
-            color:#333;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        header{
-            background:#2c3e50;
-            color:#fff;
-            padding:50px 20px;
-            text-align:center;
-        }
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f7f6;
+    color:#333;
+    line-height:1.7;
+}
 
-        .profile-img{
-            width:150px;
-            height:150px;
-            border-radius:50%;
-            border:4px solid #1abc9c;
-            object-fit:cover;
-            margin-bottom:15px;
-        }
+/* Header */
+header{
+    background:linear-gradient(135deg,#2c3e50,#1abc9c);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
 
-        header h1{
-            font-size:2.5rem;
-            margin-bottom:10px;
-        }
+.profile-img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:15px;
+}
 
-        header p{
-            color:#1abc9c;
-            font-size:1.2rem;
-        }
+header h1{
+    font-size:2.8rem;
+    margin-bottom:10px;
+}
 
-        .container{
-            max-width:1000px;
-            margin:30px auto;
-            padding:25px;
-            background:#fff;
-            border-radius:10px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.1);
-        }
+header p{
+    font-size:1.2rem;
+    opacity:0.95;
+}
 
-        h2{
-            color:#2c3e50;
-            border-bottom:2px solid #1abc9c;
-            padding-bottom:8px;
-            margin-bottom:15px;
-        }
+/* Main Container */
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:25px;
+}
 
-        section{
-            margin-bottom:30px;
-        }
+/* Sections */
+.section{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
 
-        .services-grid{
-            display:grid;
-            grid-template-columns:repeat(2,1fr);
-            gap:20px;
-            margin-top:20px;
-        }
+h2{
+    color:#2c3e50;
+    margin-bottom:15px;
+    padding-bottom:8px;
+    border-bottom:3px solid #1abc9c;
+}
 
-        .service-card{
-            background:#f9f9f9;
-            padding:20px;
-            border-left:4
+/* Services */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.service-card{
+    background:#f9f9f9;
+    padding:20px;
+    border-left:5px solid #1abc9c;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+.service-card h3{
+    margin-bottom:10px;
+    color:#2c3e50;
+}
+
+/* Why Choose Me */
+.features ul{
+    list-style:none;
+}
+
+.features li{
+    padding:8px 0;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    margin:10px;
+    text-decoration:none;
+    color:white;
+    background:#1abc9c;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+.facebook-btn{
+    background:#1877f2;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+    margin-top:30px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    header p{
+        font-size:1rem;
+    }
+
+    .profile-img{
+        width:120px;
+        height:120px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="./profile.png" alt="Parvez Mia" class="profile-img">
+
+    <h1>Parvez Mia</h1>
+    <p>Professional Data Management & AI Content Specialist</p>
+</header>
+
+<div class="container">
+
+    <section class="section">
+        <h2>About Me</h2>
+
+        <p>
+            Hello! I'm Parvez Mia, a dedicated professional specializing in
+            Data Management, Lead Generation, Web Research, AI Content Creation,
+            Image Editing, and Virtual Assistance. I help businesses manage data
+            efficiently, generate quality leads, and create impactful content
+            that drives results.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>My Core Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <h3>📊 Data & Lead Generation</h3>
+                <p>
+                    B2B Lead Generation, Data Mining, Data Collection,
+                    Web Research, CRM Management and Excel Data Entry.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>🎬 AI Media & Video</h3>
+                <p>
+                    AI Video Creation, Script Sync, Voiceovers,
+                    Subtitles and Creative Video Production.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>✨ Image Editing & Design</h3>
+                <p>
+                    Background Removal, AI Image Enhancement,
+                    Professional Editing and Logo Design.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>✍️ Content Creation</h3>
+                <p>
+                    Blog Writing, Script Writing,
+                    Social Media Content and AI-Powered Content.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section features">
+        <h2>Why Choose Me?</h2>
+
+        <ul>
+            <li>✔ Accurate & Detail-Oriented Work</li>
+            <li>✔ Fast Delivery</li>
+            <li>✔ Professional Communication</li>
+            <li>✔ 100% Client Satisfaction Focused</li>
+            <li>✔ Reliable Long-Term Support</li>
+        </ul>
+    </section>
+
+    <section class="section contact">
+        <h2>Let's Work Together</h2>
+
+        <p>
+            Ready to grow your business? Contact me through my professional profiles.
+        </p>
+
+        <a href="https://www.fiverr.com/s/WE5W51B"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn">
+            Fiverr Profile
+        </a>
+
+        <a href="https://www.facebook.com/share/1BonYpxUxH/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn facebook-btn">
+            Facebook Profile
+        </a>
+
+    </section>
+
+</div>
+
+<footer>
+    © 2026 Parvez Mia | Professional Data Management Services
+</footer>
+
+</body>
+</html>
+```
