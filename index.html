@@ -363,8 +363,14 @@ section{padding:96px 0;}
 /* ============ CONNECT (new) ============ */
 .connect-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  grid-template-columns:repeat(3, 1fr);
   gap:20px;
+}
+@media(max-width:860px){
+  .connect-grid{grid-template-columns:repeat(2, 1fr);}
+}
+@media(max-width:560px){
+  .connect-grid{grid-template-columns:1fr;}
 }
 .connect-card{
   background:var(--paper-card);
@@ -705,6 +711,13 @@ footer{background:var(--deep); color:#fff; padding:56px 20px 34px;}
         <h4>Facebook</h4>
         <p>Follow my page for updates and behind-the-scenes work.</p>
         <span class="go">Visit page →</span>
+      </a>
+
+      <a href="https://x.com/yourhandle" target="_blank" rel="noopener noreferrer" class="connect-card">
+        <div class="connect-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg></div>
+        <h4>X</h4>
+        <p>Follow for updates, tips, and quick announcements.</p>
+        <span class="go">Visit profile →</span>
       </a>
 
     </div>
