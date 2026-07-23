@@ -1,1799 +1,858 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-<title>pervez digital service</title>
-
-
-
+<title>Parvez Mia — Digital Service</title>
 <meta name="description" content="Professional Lead Generation, Data Entry, AI Content Creation, Video Editing, Thumbnail Design and Virtual Assistant Services by Parvez Mia">
-
-
-
 <meta name="author" content="Parvez Mia">
-
 <meta name="robots" content="index, follow">
-
-
-
 <link rel="icon" type="image/png" href="favicon.png">
 
-
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
+/* ============ TOKENS ============ */
+:root{
+  --paper:#EDF1EF;
+  --paper-card:#FFFFFF;
+  --ink:#132621;
+  --ink-soft:#4B5D58;
+  --line:#D8E0DD;
+  --gold:#E2A63B;
+  --gold-dark:#C88C25;
+  --teal:#1F8A8C;
+  --teal-dark:#166365;
+  --deep:#0D1B1A;
+  --deep-2:#123331;
 
-
-
-*{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
+  --font-display:'Space Grotesk', sans-serif;
+  --font-body:'Inter', sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
 }
 
-
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-
-
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{
-
-font-family:'Poppins',sans-serif;
-
-background:#f8fafc;
-
-color:#1e293b;
-
-line-height:1.7;
-
-overflow-x:hidden;
-
+  font-family:var(--font-body);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
 }
 
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+}
 
+a{color:inherit;}
+img{max-width:100%; display:block;}
+.container{width:90%; max-width:1180px; margin:auto;}
+section{padding:96px 0;}
 
-/* NAVBAR */
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--font-mono);
+  font-size:.75rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--teal-dark);
+}
+.eyebrow::before{
+  content:"";
+  width:18px;height:2px;
+  background:var(--gold);
+  display:inline-block;
+}
 
+.section-title{margin-bottom:52px;}
+.section-title h2{
+  font-family:var(--font-display);
+  font-size:2.4rem;
+  font-weight:700;
+  color:var(--ink);
+  margin:10px 0 8px;
+  letter-spacing:-.01em;
+}
+.section-title p{color:var(--ink-soft); font-size:1.02rem;}
 
-
+/* ============ NAVBAR ============ */
 .navbar{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-background:rgba(15,23,42,.95);
-
-backdrop-filter:blur(10px);
-
-z-index:1000;
-
+  position:fixed; top:0; left:0; width:100%;
+  background:rgba(13,27,26,.92);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
-
-
-
 .nav-container{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:15px 20px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
+  max-width:1180px; margin:auto;
+  padding:16px 20px;
+  display:flex; justify-content:space-between; align-items:center;
 }
-
-
-
 .logo{
-
-font-size:1.4rem;
-
-font-weight:700;
-
-color:#10b981;
-
-text-decoration:none;
-
+  font-family:var(--font-display);
+  font-size:1.25rem; font-weight:700;
+  color:#fff; text-decoration:none;
+  display:flex; align-items:center; gap:8px;
+  letter-spacing:-.01em;
 }
+.logo .dot{color:var(--gold);}
 
-
-
-.nav-links{
-
-display:flex;
-
-gap:25px;
-
-}
-
-
-
+.nav-links{display:flex; align-items:center; gap:28px;}
 .nav-links a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:500;
-
-transition:.3s;
-
+  color:rgba(255,255,255,.82);
+  text-decoration:none;
+  font-weight:500;
+  font-size:.95rem;
+  transition:color .25s;
+  position:relative;
 }
-
-
-
-.nav-links a:hover{
-
-color:#10b981;
-
+.nav-links a:hover{color:#fff;}
+.nav-links a::after{
+  content:"";
+  position:absolute; left:0; bottom:-6px;
+  width:0; height:2px; background:var(--gold);
+  transition:width .25s;
 }
+.nav-links a:hover::after{width:100%;}
 
+.nav-cta{
+  background:var(--gold);
+  color:var(--deep) !important;
+  padding:9px 18px;
+  border-radius:7px;
+  font-weight:600 !important;
+}
+.nav-cta::after{display:none;}
 
+.nav-toggle{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:6px;
+}
+.nav-toggle span{
+  width:24px; height:2px; background:#fff; display:block; transition:.3s;
+}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
-/* HERO */
-
-
-
+/* ============ HERO ============ */
 .hero{
-
-min-height:100vh;
-
-background:linear-gradient(135deg,#0f172a,#0ea5a4);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:120px 20px 80px;
-
-color:white;
-
-text-align:center;
-
+  min-height:100vh;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(226,166,59,.16), transparent 60%),
+    radial-gradient(700px 500px at 10% 110%, rgba(31,138,140,.25), transparent 60%),
+    linear-gradient(160deg, var(--deep), var(--deep-2));
+  display:flex; justify-content:center; align-items:center;
+  padding:140px 20px 60px;
+  color:#fff; text-align:center;
+  position:relative;
 }
-
-
-
-.hero-content{
-
-max-width:900px;
-
-}
-
-
+.hero-content{max-width:820px; position:relative; z-index:2;}
 
 .profile-img{
-
-width:200px;
-
-height:200px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:6px solid white;
-
-box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-margin-bottom:25px;
-
+  width:168px; height:168px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid rgba(255,255,255,.9);
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
+  margin-bottom:26px;
+  animation:riseIn .7s ease both;
 }
-
-
-
 .hero h1{
-
-font-size:4rem;
-
-font-weight:800;
-
-margin-bottom:10px;
-
+  font-family:var(--font-display);
+  font-size:clamp(2.4rem, 6vw, 3.6rem);
+  font-weight:700;
+  margin-bottom:12px;
+  letter-spacing:-.02em;
+  animation:riseIn .7s ease .1s both;
 }
-
-
-
 .hero h2{
-
-font-size:1.4rem;
-
-font-weight:400;
-
-color:#dbeafe;
-
-margin-bottom:25px;
-
+  font-size:clamp(1.05rem, 2.4vw, 1.3rem);
+  font-weight:400;
+  color:#CFE3E1;
+  margin-bottom:22px;
+  max-width:640px;
+  margin-left:auto; margin-right:auto;
+  animation:riseIn .7s ease .2s both;
 }
-
-
-
 .hero p{
-
-max-width:750px;
-
-margin:auto;
-
-font-size:1.1rem;
-
+  max-width:640px; margin:auto;
+  font-size:1.02rem;
+  color:rgba(255,255,255,.78);
+  animation:riseIn .7s ease .3s both;
 }
+.hero-buttons{margin-top:34px; animation:riseIn .7s ease .4s both;}
 
-
-
-.hero-buttons{
-
-margin-top:35px;
-
+@keyframes riseIn{
+  from{opacity:0; transform:translateY(16px);}
+  to{opacity:1; transform:translateY(0);}
 }
-
-
 
 .btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:13px 26px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:.95rem;
+  margin:6px;
+  transition:transform .25s, box-shadow .25s, background .25s;
+  border:1px solid transparent;
+}
+.btn svg{width:18px; height:18px; flex-shrink:0;}
+.btn-primary{background:var(--gold); color:var(--deep);}
+.btn-primary:hover{background:var(--gold-dark); transform:translateY(-3px);}
+.btn-outline{background:transparent; color:#fff; border-color:rgba(255,255,255,.35);}
+.btn-outline:hover{background:rgba(255,255,255,.08); transform:translateY(-3px);}
 
-display:inline-block;
-
-padding:14px 30px;
-
-border-radius:8px;
-
-text-decoration:none;
-
-font-weight:600;
-
-margin:10px;
-
-transition:.3s;
-
+/* ============ TICKER (signature element) ============ */
+.ticker{
+  background:var(--ink);
+  color:var(--paper);
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.ticker-track{
+  display:inline-block;
+  padding-left:100%;
+  animation:scrollTicker 32s linear infinite;
+  font-family:var(--font-mono);
+  font-size:.82rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding-top:13px; padding-bottom:13px;
+}
+.ticker-track span{margin:0 28px; color:#CFE3E1;}
+.ticker-track span.accent{color:var(--gold);}
+@keyframes scrollTicker{
+  from{transform:translateX(0);}
+  to{transform:translateX(-100%);}
 }
 
+/* ============ ABOUT ============ */
+.about-box{
+  background:var(--paper-card);
+  padding:44px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  box-shadow:0 4px 24px rgba(19,38,33,.05);
+  font-size:1.04rem;
+  color:var(--ink-soft);
+}
+.about-box p + p{margin-top:18px;}
+.about-box strong{color:var(--ink);}
 
-
-.btn-primary{
-
-background:#10b981;
-
-color:white;
-
+/* ============ SERVICES ============ */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:22px;
+}
+.service-card{
+  background:var(--paper-card);
+  padding:28px 26px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  border-top:3px solid var(--teal);
+  transition:transform .3s, box-shadow .3s;
+}
+.service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 32px rgba(19,38,33,.09);
+}
+.service-card .code{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.08em;
+  color:var(--gold-dark);
+  display:block;
+  margin-bottom:10px;
+}
+.service-card h3{
+  font-family:var(--font-display);
+  font-size:1.18rem;
+  margin-bottom:14px;
+  color:var(--ink);
+  display:flex; align-items:center; gap:10px;
+}
+.service-card ul{list-style:none;}
+.service-card li{
+  margin-bottom:9px;
+  padding-left:18px;
+  position:relative;
+  color:var(--ink-soft);
+  font-size:.95rem;
+}
+.service-card li::before{
+  content:"";
+  position:absolute; left:0; top:9px;
+  width:6px; height:6px;
+  background:var(--gold);
+  border-radius:1px;
 }
 
+/* ============ WHY ============ */
+.why-section{background:var(--paper-card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:18px;
+}
+.why-box{
+  background:var(--paper);
+  padding:22px 22px;
+  border-left:4px solid var(--teal);
+  border-radius:10px;
+  display:flex; align-items:flex-start; gap:12px;
+  font-size:.98rem;
+  color:var(--ink);
+}
+.why-box svg{flex-shrink:0; width:20px; height:20px; color:var(--teal-dark); margin-top:2px;}
 
-
-.btn-facebook{
-
-background:#1877f2;
-
-color:white;
-
+/* ============ SKILLS ============ */
+.skill{margin-bottom:24px;}
+.skill-title{
+  display:flex; justify-content:space-between;
+  margin-bottom:9px;
+  font-weight:600;
+}
+.skill-title span:last-child{
+  font-family:var(--font-mono);
+  color:var(--teal-dark);
+  font-size:.9rem;
+}
+.progress{height:10px; background:var(--line); border-radius:20px; overflow:hidden;}
+.progress-fill{
+  height:100%;
+  background:linear-gradient(90deg, var(--teal), var(--gold));
+  border-radius:20px;
+  width:0;
+  transition:width 1.2s ease;
 }
 
+/* ============ STATS ============ */
+.stats-section{
+  background:linear-gradient(160deg, var(--deep), var(--deep-2));
+  color:#fff;
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+}
+.stat-box{text-align:center; padding:20px;}
+.stat-box h3{
+  font-family:var(--font-display);
+  font-size:2.8rem;
+  color:var(--gold);
+  margin-bottom:6px;
+}
+.stat-box p{color:rgba(255,255,255,.75); font-size:.95rem;}
 
-
-.btn:hover{
-
-transform:translateY(-4px);
-
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-
+/* ============ CONNECT (new) ============ */
+.connect-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+.connect-card{
+  background:var(--paper-card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:26px;
+  text-decoration:none;
+  color:var(--ink);
+  display:flex; flex-direction:column; gap:14px;
+  transition:transform .3s, box-shadow .3s, border-color .3s;
+}
+.connect-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 30px rgba(19,38,33,.09);
+  border-color:var(--teal);
+}
+.connect-icon{
+  width:44px; height:44px;
+  border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--paper);
+  color:var(--teal-dark);
+}
+.connect-icon svg{width:22px; height:22px;}
+.connect-card h4{font-family:var(--font-display); font-size:1.05rem;}
+.connect-card p{color:var(--ink-soft); font-size:.9rem;}
+.connect-card .go{
+  margin-top:auto;
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  color:var(--gold-dark);
+  letter-spacing:.04em;
 }
 
-
-
-/* COMMON */
-
-
-
-.container{
-
-width:90%;
-
-max-width:1200px;
-
-margin:auto;
-
+/* ============ CONTACT ============ */
+.contact-box{
+  background:var(--paper-card);
+  padding:56px 40px;
+  border-radius:20px;
+  border:1px solid var(--line);
+  box-shadow:0 4px 24px rgba(19,38,33,.05);
+  text-align:center;
 }
-
-
-
-section{
-
-padding:90px 0;
-
+.contact-box h2{
+  font-family:var(--font-display);
+  font-size:2rem;
+  margin-bottom:16px;
 }
+.contact-box p{color:var(--ink-soft); max-width:520px; margin:auto;}
 
-
-
-.section-title{
-
-text-align:center;
-
-margin-bottom:60px;
-
+/* ============ FOOTER ============ */
+footer{background:var(--deep); color:#fff; padding:56px 20px 34px;}
+.footer-content{max-width:900px; margin:auto; text-align:center;}
+.footer-content h3{font-family:var(--font-display); font-size:1.6rem; margin-bottom:12px;}
+.footer-content > p{color:rgba(255,255,255,.65); font-size:.95rem;}
+.footer-links{margin:26px 0; display:flex; flex-wrap:wrap; justify-content:center; gap:22px;}
+.footer-links a{color:rgba(255,255,255,.8); text-decoration:none; font-size:.92rem; transition:.25s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-social{display:flex; justify-content:center; gap:14px; margin-bottom:22px;}
+.footer-social a{
+  width:38px; height:38px; border-radius:9px;
+  background:rgba(255,255,255,.06);
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; transition:.25s;
 }
+.footer-social a:hover{background:var(--teal); transform:translateY(-3px);}
+.footer-social svg{width:17px; height:17px;}
+.copyright{margin-top:10px; color:rgba(255,255,255,.4); font-size:.85rem;}
 
-
-
-.section-title h2{
-
-font-size:2.5rem;
-
-margin-bottom:10px;
-
-color:#0f172a;
-
+/* ============ WHATSAPP FLOAT ============ */
+.wa-float{
+  position:fixed; bottom:22px; right:22px;
+  width:56px; height:56px; border-radius:50%;
+  background:#25D366;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  z-index:900; transition:transform .25s;
+  color:#fff;
 }
+.wa-float:hover{transform:scale(1.08);}
+.wa-float svg{width:28px; height:28px;}
 
-
-
-.section-title p{
-
-color:#64748b;
-
+/* ============ MOBILE ============ */
+@media(max-width:860px){
+  .nav-links{
+    position:fixed; top:64px; right:0;
+    width:min(280px, 78vw); height:calc(100vh - 64px);
+    background:var(--deep);
+    flex-direction:column; align-items:flex-start;
+    gap:0; padding:24px;
+    transform:translateX(100%);
+    transition:transform .3s ease;
+    border-left:1px solid rgba(255,255,255,.08);
+  }
+  .nav-links.open{transform:translateX(0);}
+  .nav-links a{width:100%; padding:14px 4px; border-bottom:1px solid rgba(255,255,255,.07);}
+  .nav-cta{margin-top:10px; text-align:center;}
+  .nav-toggle{display:flex;}
 }
-
-
-
-/* MOBILE */
-
-
 
 @media(max-width:768px){
-
-
-
-.nav-links{
-
-display:none;
-
+  section{padding:64px 0;}
+  .hero{padding:120px 20px 56px;}
+  .hero h1{font-size:2.1rem;}
+  .profile-img{width:126px; height:126px;}
+  .about-box, .contact-box{padding:28px 22px;}
+  .section-title h2{font-size:1.8rem;}
+  .footer-links{flex-direction:column; gap:10px;}
 }
-
-
-
-.hero h1{
-
-font-size:2.5rem;
-
-}
-
-
-
-.hero h2{
-
-font-size:1.1rem;
-
-}
-
-
-
-.profile-img{
-
-width:140px;
-
-height:140px;
-
-}
-
-
-
-}
-
-
-
 </style>
-
-
-
 </head>
-
-
-
 <body>
 
-
-
 <!-- NAVIGATION -->
-
-
-
 <nav class="navbar">
-
-
-
-<div class="nav-container">
-
-
-
-<a href="#" class="logo">Pervez Digital Service</a>
-
-
-
-<div class="nav-links">
-
-<a href="#about">About</a>
-
-<a href="#services">Services</a>
-
-<a href="#why">Why Me</a>
-
-<a href="#contact">Contact</a>
-
-</div>
-
-
-
-</div>
-
-
-
+  <div class="nav-container">
+    <a href="#" class="logo">Parvez<span class="dot">.</span>Digital</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Me</a>
+      <a href="#connect">Connect</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-
-
 <!-- HERO -->
-
-
-
 <section class="hero">
+  <div class="hero-content">
+    <img src="profile.jpg" alt="Parvez Mia" class="profile-img">
+    <h1>Parvez Mia</h1>
+    <h2>Lead Generation, Data Management, AI Content &amp; Video Editing</h2>
+    <p>Your one-stop solution for data, design and digital content — helping businesses grow through accurate data management, creative content, professional video editing, and AI-powered digital solutions.</p>
+    <div class="hero-buttons">
+      <a href="https://www.fiverr.com/s/WE5W51B" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        Hire Me on Fiverr
+      </a>
+      <a href="https://www.upwork.com/freelancers/~yourid" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        Hire Me on Upwork
+      </a>
+      <a href="https://wa.me/8801XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.39a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.06h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.14 8.14 0 0 1-1.26-4.37c0-4.5 3.66-8.17 8.16-8.17 2.18 0 4.23.85 5.77 2.4a8.1 8.1 0 0 1 2.39 5.78c0 4.5-3.66 8.23-8.08 8.23zm4.47-6.12c-.24-.12-1.44-.71-1.67-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+        WhatsApp Me
+      </a>
+    </div>
+  </div>
+</section>
 
-
-
-<div class="hero-content">
-
-
-
-<img src="profile.jpg" alt="Parvez Mia" class="profile-img">
-
-
-
-<h1>Parvez Mia</h1>
-
-
-
-<h2>
-
-Professional Lead Generation, Data Management,
-
-AI Content Creation & Video Editing Services
-
-</h2>
-
-
-
-<p>
-
-Your One-Stop Solution for Data, Design & Digital Content.
-
-Helping businesses grow through accurate data management,
-
-creative content creation, professional video editing,
-
-and AI-powered digital solutions.
-
-</p>
-
-
-
-<div class="hero-buttons">
-
-
-
-<a href="https://www.fiverr.com/s/WE5W51B"
-
-target="_blank"
-
-rel="noopener noreferrer"
-
-class="btn btn-primary">
-
-Hire Me On Fiverr
-
-</a>
-
-
-
-<a href="https://www.facebook.com/share/1BonYpxUxH/"
-
-target="_blank"
-
-rel="noopener noreferrer"
-
-class="btn btn-facebook">
-
-Connect On Facebook
-
-</a>
-
-
-
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Lead Generation</span><span class="accent">•</span>
+    <span>Data Entry &amp; Research</span><span class="accent">•</span>
+    <span>AI Content Creation</span><span class="accent">•</span>
+    <span>Video Editing</span><span class="accent">•</span>
+    <span>Thumbnail Design</span><span class="accent">•</span>
+    <span>Virtual Assistant</span><span class="accent">•</span>
+    <span>Lead Generation</span><span class="accent">•</span>
+    <span>Data Entry &amp; Research</span><span class="accent">•</span>
+    <span>AI Content Creation</span><span class="accent">•</span>
+    <span>Video Editing</span><span class="accent">•</span>
+    <span>Thumbnail Design</span><span class="accent">•</span>
+    <span>Virtual Assistant</span><span class="accent">•</span>
+  </div>
 </div>
 
-
-
-</div>
-
-
-
-</section><!-- ABOUT SECTION -->
-
-
-
+<!-- ABOUT -->
 <section id="about">
-
-
-
-<div class="container">
-
-
-
-<div class="section-title">
-
-<h2>About Me</h2>
-
-<p>Learn More About My Professional Background</p>
-
-</div>
-
-
-
-<div class="about-box">
-
-
-
-<p>
-
-Hello! I'm Parvez Mia, a dedicated freelancer specializing in Data Entry,
-
-Lead Generation, AI-Powered Content Creation, Video Editing,
-
-and Graphic Design.
-
-</p>
-
-
-
-<br>
-
-
-
-<p>
-
-I help businesses and content creators streamline their workflow,
-
-generate quality leads, manage data efficiently,
-
-and create engaging digital content that drives results.
-
-</p>
-
-
-
-<br>
-
-
-
-<p>
-
-My expertise includes B2B Lead Generation, LinkedIn Research,
-
-Email List Building, Web Research, Data Entry,
-
-AI Image Editing, Logo Design, Thumbnail Design,
-
-YouTube Video Editing, Shorts & Reels Editing,
-
-AI Video Creation, Script Writing,
-
-SEO Content Writing and Social Media Content Creation.
-
-</p>
-
-
-
-<br>
-
-
-
-<p>
-
-I am committed to delivering high-quality work with accuracy,
-
-creativity, professionalism, and on-time delivery.
-
-My goal is to provide reliable solutions that help clients
-
-grow their business, strengthen their online presence,
-
-and achieve their goals efficiently.
-
-</p>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Profile</span>
+      <h2>About Me</h2>
+      <p>Learn more about my professional background</p>
+    </div>
+    <div class="about-box">
+      <p>Hello! I'm <strong>Parvez Mia</strong>, a dedicated freelancer specializing in data entry, lead generation, AI-powered content creation, video editing, and graphic design.</p>
+      <p>I help businesses and content creators streamline their workflow, generate quality leads, manage data efficiently, and create engaging digital content that drives results.</p>
+      <p>My expertise includes B2B lead generation, LinkedIn research, email list building, web research, data entry, AI image editing, logo design, thumbnail design, YouTube video editing, shorts &amp; reels editing, AI video creation, script writing, SEO content writing, and social media content creation.</p>
+      <p>I'm committed to delivering high-quality work with accuracy, creativity, professionalism, and on-time delivery — reliable solutions that help clients grow their business and strengthen their online presence.</p>
+    </div>
+  </div>
 </section>
 
-
-
-<style>
-
-
-
-.about-box{
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-
-font-size:1.05rem;
-
-}
-
-
-
-</style>
-
-
-
-<!-- SERVICES SECTION -->
-
-
-
+<!-- SERVICES -->
 <section id="services">
-
-
-
-<div class="container">
-
-
-
-<div class="section-title">
-
-<h2>Professional Services</h2>
-
-<p>Services I Provide To Help Businesses Grow</p>
-
-</div>
-
-
-
-<div class="services-grid">
-
-
-
-<!-- SERVICE 1 -->
-
-
-
-<div class="service-card">
-
-
-
-<h3>📊 Data & Lead Generation</h3>
-
-
-
-<ul>
-
-<li>B2B Lead Generation</li>
-
-<li>LinkedIn Lead Generation</li>
-
-<li>Targeted Email List Building</li>
-
-<li>Apollo.io Lead Generation</li>
-
-<li>Email Finding & Verification</li>
-
-<li>Data Entry & Web Research</li>
-
-<li>Excel Data Entry</li>
-
-<li>Copy Paste & Data Collection</li>
-
-<li>CRM Data Entry</li>
-
-<li>Virtual Assistant Services</li>
-
-</ul>
-
-
-
-</div>
-
-
-
-<!-- SERVICE 2 -->
-
-
-
-<div class="service-card">
-
-
-
-<h3>🎬 Video Editing</h3>
-
-
-
-<ul>
-
-<li>YouTube Video Editing</li>
-
-<li>YouTube Shorts Editing</li>
-
-<li>Instagram Reels Editing</li>
-
-<li>Talking Head Video Editing</li>
-
-<li>Faceless Cash Cow Video Editing</li>
-
-<li>Podcast Video Editing</li>
-
-<li>Subtitle & Caption Editing</li>
-
-<li>Cinematic Video Editing</li>
-
-<li>Motion Graphics & Transitions</li>
-
-<li>Professional Color Grading</li>
-
-</ul>
-
-
-
-</div>
-
-
-
-<!-- SERVICE 3 -->
-
-
-
-<div class="service-card">
-
-
-
-<h3>🖼️ Thumbnail Design</h3>
-
-
-
-<ul>
-
-<li>YouTube Thumbnail Design</li>
-
-<li>Gaming Thumbnail Design</li>
-
-<li>Facebook Thumbnail Design</li>
-
-<li>Professional Thumbnail Design</li>
-
-<li>Viral Clickable Thumbnail</li>
-
-<li>Thumbnail Enhancement</li>
-
-<li>Thumbnail Redesign</li>
-
-<li>Bulk Thumbnail Package</li>
-
-</ul>
-
-
-
-</div>
-
-
-
-<!-- SERVICE 4 -->
-
-
-
-<div class="service-card">
-
-
-
-<h3>🤖 AI Media & Design</h3>
-
-
-
-<ul>
-
-<li>AI Image Generation</li>
-
-<li>AI Video Generation</li>
-
-<li>AI Content Creation</li>
-
-<li>AI Thumbnail Design</li>
-
-<li>AI Social Media Design</li>
-
-<li>AI Background Removal</li>
-
-<li>AI Image Upscaling</li>
-
-<li>AI Photo Editing</li>
-
-<li>AI Logo Concept Generation</li>
-
-</ul>
-
-
-
-</div>
-
-
-
-<!-- SERVICE 5 -->
-
-
-
-<div class="service-card">
-
-
-
-<h3>✨ Image Editing & Design</h3>
-
-
-
-<ul>
-
-<li>AI Image Editing</li>
-
-<li>AI Photo Enhancement</li>
-
-<li>AI Product Photo Editing</li>
-
-<li>AI Background Removal</li>
-
-<li>AI Image Upscaling</li>
-
-<li>AI Logo Design</li>
-
-<li>AI Logo Redesign</li>
-
-<li>AI Minimalist Logo Design</li>
-
-<li>AI Brand Identity Design</li>
-
-</ul>
-
-
-
-</div>
-
-
-
-<!-- SERVICE 6 -->
-
-
-
-<div class="service-card">
-
-
-
-<h3>✍️ Content Creation</h3>
-
-
-
-<ul>
-
-<li>YouTube Script Writing</li>
-
-<li>Faceless YouTube Script Writing</li>
-
-<li>SEO Blog Writing</li>
-
-<li>Article Writing</li>
-
-<li>Website Content Writing</li>
-
-<li>Social Media Content Creation</li>
-
-<li>AI Content Writing</li>
-
-<li>Product Description Writing</li>
-
-<li>Copywriting</li>
-
-<li>Content Editing & Proofreading</li>
-
-</ul>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">What I Offer</span>
+      <h2>Professional Services</h2>
+      <p>Services I provide to help businesses grow</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="code">LG · 01</span>
+        <h3>📊 Data &amp; Lead Generation</h3>
+        <ul>
+          <li>B2B Lead Generation</li>
+          <li>LinkedIn Lead Generation</li>
+          <li>Targeted Email List Building</li>
+          <li>Apollo.io Lead Generation</li>
+          <li>Email Finding &amp; Verification</li>
+          <li>Data Entry &amp; Web Research</li>
+          <li>Excel Data Entry</li>
+          <li>CRM Data Entry</li>
+          <li>Virtual Assistant Services</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="code">VE · 02</span>
+        <h3>🎬 Video Editing</h3>
+        <ul>
+          <li>YouTube Video Editing</li>
+          <li>YouTube Shorts Editing</li>
+          <li>Instagram Reels Editing</li>
+          <li>Talking Head Video Editing</li>
+          <li>Faceless Cash Cow Video Editing</li>
+          <li>Podcast Video Editing</li>
+          <li>Subtitle &amp; Caption Editing</li>
+          <li>Motion Graphics &amp; Transitions</li>
+          <li>Professional Color Grading</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="code">TD · 03</span>
+        <h3>🖼️ Thumbnail Design</h3>
+        <ul>
+          <li>YouTube Thumbnail Design</li>
+          <li>Gaming Thumbnail Design</li>
+          <li>Facebook Thumbnail Design</li>
+          <li>Viral Clickable Thumbnail</li>
+          <li>Thumbnail Enhancement &amp; Redesign</li>
+          <li>Bulk Thumbnail Package</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="code">AI · 04</span>
+        <h3>🤖 AI Media &amp; Design</h3>
+        <ul>
+          <li>AI Image Generation</li>
+          <li>AI Video Generation</li>
+          <li>AI Content Creation</li>
+          <li>AI Thumbnail &amp; Social Media Design</li>
+          <li>AI Background Removal &amp; Upscaling</li>
+          <li>AI Logo Concept Generation</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="code">IM · 05</span>
+        <h3>✨ Image Editing &amp; Design</h3>
+        <ul>
+          <li>AI Photo Enhancement</li>
+          <li>AI Product Photo Editing</li>
+          <li>AI Background Removal &amp; Upscaling</li>
+          <li>AI Logo Design &amp; Redesign</li>
+          <li>Minimalist Logo Design</li>
+          <li>Brand Identity Design</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="code">CW · 06</span>
+        <h3>✍️ Content Creation</h3>
+        <ul>
+          <li>YouTube &amp; Faceless Script Writing</li>
+          <li>SEO Blog &amp; Article Writing</li>
+          <li>Website Content Writing</li>
+          <li>Social Media Content Creation</li>
+          <li>Product Description Writing</li>
+          <li>Content Editing &amp; Proofreading</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-
-
-<style>
-
-
-
-.services-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:25px;
-
-}
-
-
-
-.service-card{
-
-background:white;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-
-
-.service-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-
-
-.service-card h3{
-
-margin-bottom:15px;
-
-color:#0f172a;
-
-}
-
-
-
-.service-card ul{
-
-padding-left:20px;
-
-}
-
-
-
-.service-card li{
-
-margin-bottom:8px;
-
-}
-
-
-
-</style><!-- WHY CHOOSE ME -->
-
-
-
+<!-- WHY -->
 <section id="why" class="why-section">
-
-
-
-<div class="container">
-
-
-
-<div class="section-title">
-
-<h2>Why Choose Me?</h2>
-
-<p>Reasons Why Clients Love Working With Me</p>
-
-</div>
-
-
-
-<div class="why-grid">
-
-
-
-<div class="why-box">
-
-✔️ High-Quality Work with Attention to Detail
-
-</div>
-
-
-
-<div class="why-box">
-
-✔️ 100% Accuracy and Professional Service
-
-</div>
-
-
-
-<div class="why-box">
-
-✔️ Fast Delivery and Timely Communication
-
-</div>
-
-
-
-<div class="why-box">
-
-✔️ Client Satisfaction is My Top Priority
-
-</div>
-
-
-
-<div class="why-box">
-
-✔️ Reliable, Dedicated, and Results-Driven
-
-</div>
-
-
-
-<div class="why-box">
-
-✔️ Skilled in Data Entry, Lead Generation, AI Content Creation & Video Editing
-
-</div>
-
-
-
-<div class="why-box">
-
-✔️ Quick Response and Ongoing Support
-
-</div>
-
-
-
-<div class="why-box">
-
-✔️ Committed to Delivering Value Beyond Expectations
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Why Me</span>
+      <h2>Why Choose Me?</h2>
+      <p>Reasons why clients love working with me</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>High-quality work with attention to detail</div>
+      <div class="why-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>100% accuracy and professional service</div>
+      <div class="why-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Fast delivery and timely communication</div>
+      <div class="why-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Client satisfaction is my top priority</div>
+      <div class="why-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Reliable, dedicated, and results-driven</div>
+      <div class="why-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Skilled across data, lead-gen, AI content &amp; video</div>
+      <div class="why-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Quick response and ongoing support</div>
+      <div class="why-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Committed to delivering value beyond expectations</div>
+    </div>
+  </div>
 </section>
-
-
 
 <!-- SKILLS -->
-
-
-
 <section class="skills-section">
-
-
-
-<div class="container">
-
-
-
-<div class="section-title">
-
-<h2>Professional Skills</h2>
-
-<p>Areas of Expertise</p>
-
-</div>
-
-
-
-<div class="skill">
-
-
-
-<div class="skill-title">
-
-<span>Lead Generation</span>
-
-<span>95%</span>
-
-</div>
-
-
-
-<div class="progress">
-
-<div class="progress-fill" style="width:95%;"></div>
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="skill">
-
-
-
-<div class="skill-title">
-
-<span>Data Entry & Research</span>
-
-<span>98%</span>
-
-</div>
-
-
-
-<div class="progress">
-
-<div class="progress-fill" style="width:98%;"></div>
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="skill">
-
-
-
-<div class="skill-title">
-
-<span>AI Content Creation</span>
-
-<span>90%</span>
-
-</div>
-
-
-
-<div class="progress">
-
-<div class="progress-fill" style="width:90%;"></div>
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="skill">
-
-
-
-<div class="skill-title">
-
-<span>Video Editing</span>
-
-<span>88%</span>
-
-</div>
-
-
-
-<div class="progress">
-
-<div class="progress-fill" style="width:88%;"></div>
-
-</div>
-
-
-
-</div>
-
-
-
-<div class="skill">
-
-
-
-<div class="skill-title">
-
-<span>Thumbnail Design</span>
-
-<span>92%</span>
-
-</div>
-
-
-
-<div class="progress">
-
-<div class="progress-fill" style="width:92%;"></div>
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Expertise</span>
+      <h2>Professional Skills</h2>
+      <p>Areas of expertise</p>
+    </div>
+
+    <div class="skill">
+      <div class="skill-title"><span>Lead Generation</span><span>95%</span></div>
+      <div class="progress"><div class="progress-fill" data-fill="95"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-title"><span>Data Entry &amp; Research</span><span>98%</span></div>
+      <div class="progress"><div class="progress-fill" data-fill="98"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-title"><span>AI Content Creation</span><span>90%</span></div>
+      <div class="progress"><div class="progress-fill" data-fill="90"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-title"><span>Video Editing</span><span>88%</span></div>
+      <div class="progress"><div class="progress-fill" data-fill="88"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-title"><span>Thumbnail Design</span><span>92%</span></div>
+      <div class="progress"><div class="progress-fill" data-fill="92"></div></div>
+    </div>
+  </div>
 </section>
-
-
 
 <!-- STATS -->
-
-
-
 <section class="stats-section">
-
-
-
-<div class="container">
-
-
-
-<div class="stats-grid">
-
-
-
-<div class="stat-box">
-
-<h3>100+</h3>
-
-<p>Projects Completed</p>
-
-</div>
-
-
-
-<div class="stat-box">
-
-<h3>50+</h3>
-
-<p>Happy Clients</p>
-
-</div>
-
-
-
-<div class="stat-box">
-
-<h3>24/7</h3>
-
-<p>Support</p>
-
-</div>
-
-
-
-<div class="stat-box">
-
-<h3>100%</h3>
-
-<p>Client Focused</p>
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box"><h3>100+</h3><p>Projects Completed</p></div>
+      <div class="stat-box"><h3>50+</h3><p>Happy Clients</p></div>
+      <div class="stat-box"><h3>24/7</h3><p>Support</p></div>
+      <div class="stat-box"><h3>100%</h3><p>Client Focused</p></div>
+    </div>
+  </div>
 </section>
 
+<!-- CONNECT (new) -->
+<section id="connect">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Platforms</span>
+      <h2>Let's Connect</h2>
+      <p>Find and hire me on any of these platforms</p>
+    </div>
+    <div class="connect-grid">
 
+      <a href="https://www.fiverr.com/s/WE5W51B" target="_blank" rel="noopener noreferrer" class="connect-card">
+        <div class="connect-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+        <h4>Fiverr</h4>
+        <p>Browse my gigs and order a service directly.</p>
+        <span class="go">View profile →</span>
+      </a>
+
+      <a href="https://www.upwork.com/freelancers/~yourid" target="_blank" rel="noopener noreferrer" class="connect-card">
+        <div class="connect-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <h4>Upwork</h4>
+        <p>Hire me for longer-term or hourly contracts.</p>
+        <span class="go">View profile →</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="connect-card">
+        <div class="connect-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A5 5 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <h4>LinkedIn</h4>
+        <p>Connect with me professionally and see my work history.</p>
+        <span class="go">View profile →</span>
+      </a>
+
+      <a href="https://wa.me/8801XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="connect-card">
+        <div class="connect-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.39a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg></div>
+        <h4>WhatsApp</h4>
+        <p>Message me directly for quick questions or quotes.</p>
+        <span class="go">Chat now →</span>
+      </a>
+
+      <a href="https://www.facebook.com/share/1BonYpxUxH/" target="_blank" rel="noopener noreferrer" class="connect-card">
+        <div class="connect-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+        <h4>Facebook</h4>
+        <p>Follow my page for updates and behind-the-scenes work.</p>
+        <span class="go">Visit page →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 <!-- CONTACT -->
-
-
-
 <section id="contact">
-
-
-
-<div class="container">
-
-
-
-<div class="contact-box">
-
-
-
-<h2>Let's Work Together</h2>
-
-
-
-<p>
-
-Ready to grow your business?
-
-Let's discuss your project and bring your ideas to life.
-
-</p>
-
-
-
-<div style="margin-top:30px;">
-
-
-
-<a href="https://www.fiverr.com/s/WE5W51B"
-
-target="_blank"
-
-rel="noopener noreferrer"
-
-class="btn btn-primary">
-
-Hire Me On Fiverr
-
-</a>
-
-
-
-<a href="https://www.facebook.com/share/1BonYpxUxH/"
-
-target="_blank"
-
-rel="noopener noreferrer"
-
-class="btn btn-facebook">
-
-Connect On Facebook
-
-</a>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
+  <div class="container">
+    <div class="contact-box">
+      <h2>Let's Work Together</h2>
+      <p>Ready to grow your business? Let's discuss your project and bring your ideas to life.</p>
+      <div class="hero-buttons">
+        <a href="https://www.fiverr.com/s/WE5W51B" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="color:#0D1B1A;">
+          Hire Me on Fiverr
+        </a>
+        <a href="https://wa.me/8801XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="color:#132621; border-color:#D8E0DD;">
+          WhatsApp Me
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
 <!-- FOOTER -->
-
-
-
 <footer>
+  <div class="footer-content">
+    <h3>Parvez Mia</h3>
+    <p>Professional Lead Generation • Data Management • AI Content Creation • Video Editing</p>
 
+    <div class="footer-social">
+      <a href="https://www.fiverr.com/s/WE5W51B" target="_blank" rel="noopener noreferrer" aria-label="Fiverr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </a>
+      <a href="https://www.upwork.com/freelancers/~yourid" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5A5 5 0 0 1 16 8z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://wa.me/8801XXXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.39a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/1BonYpxUxH/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+    </div>
 
-
-<div class="footer-content">
-
-
-
-<h3>Parvez Mia</h3>
-
-
-
-<p>
-
-Professional Lead Generation • Data Management • AI Content Creation • Video Editing
-
-</p>
-
-
-
-<div class="footer-links">
-
-
-
-<a href="#about">About</a>
-
-<a href="#services">Services</a>
-
-<a href="#why">Why Me</a>
-
-<a href="#contact">Contact</a>
-
-
-
-</div>
-
-
-
-<p class="copyright">
-
-© 2025–2026 Parvez Mia | All Rights Reserved
-
-</p>
-
-
-
-</div>
-
-
-
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Me</a>
+      <a href="#connect">Connect</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="copyright">© 2025–2026 Parvez Mia | All Rights Reserved</p>
+  </div>
 </footer>
 
-
-
-<!-- ADDITIONAL CSS -->
-
-
-
-<style>
-
-
-
-/* WHY */
-
-
-
-.why-section{
-
-background:#ffffff;
-
-}
-
-
-
-.why-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:20px;
-
-}
-
-
-
-.why-box{
-
-background:#f8fafc;
-
-padding:20px;
-
-border-left:5px solid #10b981;
-
-border-radius:10px;
-
-box-shadow:0 3px 10px rgba(0,0,0,.05);
-
-}
-
-
-
-/* SKILLS */
-
-
-
-.skills-section{
-
-background:#ffffff;
-
-}
-
-
-
-.skill{
-
-margin-bottom:25px;
-
-}
-
-
-
-.skill-title{
-
-display:flex;
-
-justify-content:space-between;
-
-margin-bottom:8px;
-
-font-weight:600;
-
-}
-
-
-
-.progress{
-
-height:12px;
-
-background:#e5e7eb;
-
-border-radius:20px;
-
-overflow:hidden;
-
-}
-
-
-
-.progress-fill{
-
-height:100%;
-
-background:linear-gradient(90deg,#10b981,#06b6d4);
-
-border-radius:20px;
-
-}
-
-
-
-/* STATS */
-
-
-
-.stats-section{
-
-background:linear-gradient(135deg,#0f172a,#0ea5a4);
-
-color:white;
-
-}
-
-
-
-.stats-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-}
-
-
-
-.stat-box{
-
-text-align:center;
-
-padding:30px;
-
-}
-
-
-
-.stat-box h3{
-
-font-size:3rem;
-
-margin-bottom:10px;
-
-}
-
-
-
-/* CONTACT */
-
-
-
-.contact-box{
-
-background:white;
-
-padding:50px;
-
-border-radius:20px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-
-text-align:center;
-
-}
-
-
-
-.contact-box h2{
-
-margin-bottom:20px;
-
-}
-
-
-
-/* FOOTER */
-
-
-
-footer{
-
-background:#0f172a;
-
-color:white;
-
-padding:50px 20px;
-
-text-align:center;
-
-}
-
-
-
-.footer-content{
-
-max-width:900px;
-
-margin:auto;
-
-}
-
-
-
-.footer-content h3{
-
-font-size:2rem;
-
-margin-bottom:15px;
-
-}
-
-
-
-.footer-links{
-
-margin:25px 0;
-
-}
-
-
-
-.footer-links a{
-
-color:white;
-
-text-decoration:none;
-
-margin:0 15px;
-
-transition:.3s;
-
-}
-
-
-
-.footer-links a:hover{
-
-color:#10b981;
-
-}
-
-
-
-.copyright{
-
-margin-top:20px;
-
-color:#cbd5e1;
-
-}
-
-
-
-/* MOBILE */
-
-
-
-@media(max-width:768px){
-
-
-
-.contact-box{
-
-padding:30px 20px;
-
-}
-
-
-
-.stat-box h3{
-
-font-size:2rem;
-
-}
-
-
-
-.footer-links a{
-
-display:block;
-
-margin:10px 0;
-
-}
-
-
-
-}
-
-
-
-</style>
-
-
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/8801XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.39a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+</a>
+
+<script>
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Animate skill bars when in view
+const bars = document.querySelectorAll('.progress-fill');
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.style.width = entry.target.dataset.fill + '%';
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+bars.forEach(b => barObserver.observe(b));
+</script>
 
 </body>
-
 </html>
